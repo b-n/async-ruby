@@ -4,12 +4,16 @@
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",
-    "export": "slidev export"
+    "export": "slidev export",
+    "publish": "gh-pages -d dist"
   },
   "dependencies": {
     "@slidev/cli": "^0.35.5",
     "@slidev/theme-default": "*",
     "@slidev/theme-seriph": "*"
   },
-  "packageManager": "yarn@3.2.3"
+  "packageManager": "yarn@3.2.3",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
 }
