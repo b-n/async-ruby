@@ -174,6 +174,10 @@ layout: cover
 
 [Ractors](https://www.fullstackruby.dev/ruby-3-fundamentals/2021/01/27/ractors-multi-core-parallel-processing-in-ruby-3/)
 
+[Fiber scheduler](https://brunosutic.com/blog/ruby-fiber-scheduler)
+
+[Async gem](https://brunosutic.com/blog/async-ruby)
+
 --- 
 
 ## Acknowledgements
