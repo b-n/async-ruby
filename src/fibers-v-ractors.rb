@@ -68,3 +68,5 @@ puts "Fibers: \t#{f_counter.count}, #{f_counter.even_count}, #{fiber_time.round(
 puts "Ractors: \t#{r_counter.count}, #{r_counter.even_count}, #{ractor_time.round(3)}"
 
 puts "Difference:\t#{r_counter.count-f_counter.count}, #{r_counter.even_count - f_counter.even_count}, #{(ractor_time/fiber_time*100).round(2)}%" 
+
+puts "\n" * 20

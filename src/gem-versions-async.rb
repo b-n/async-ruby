@@ -9,8 +9,7 @@ require 'async/semaphore'
 
 DEFAULT_APPS = %w[ab accounts assets auctioneer-tools augeo auth buyer catawiki catawiki-r4 cerberus customer-info customer-support datascience-api employee-identity feedback finance fulfilment images jobs landscape lots machine-translation mailer marketing message-center nginx orders payments sales search seller-center sherlock shipping translation-keys translations].sort
 GEM_FILE = 'Gemfile.lock'
-#GEMS = %w[cw-sdk cw-api cw-metrics cw-ab-test catbus rails resque sidekiq]
-GEMS = %w[rails]
+GEMS = %w[cw-sdk cw-api cw-metrics cw-ab-test catbus rails resque sidekiq]
 
 APPS = DEFAULT_APPS;
 

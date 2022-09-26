@@ -14,11 +14,17 @@ info: |
 
 ## A ⚡ talk about async in Ruby 3.x
 
+<!--
+Specifically:
+- The async ruby gem
+- Fiber Scheduler (new in ruby 3)
+- A bit on ractors
+-->
 ---
 layout: center
 ---
 
-# LIVE CODING TIME
+# LIVE **CODING** TIME
 
 <!--
 Let's just async some code - straight to live coding
@@ -46,9 +52,11 @@ background: './denny-muller-JyRTi3LoQnc-unsplash.jpg'
 
 <div class="container text-center">
 
-<p class="text-7xl py-8">
-  FIBERS
-</p>
+# FIBERS
+
+### With some Fiber Scheduler
+
+<div class="py-10">
 
 <v-clicks>
 
@@ -62,29 +70,36 @@ Do you like race conditions and not having semaphores?
 
 </div>
 
+</div>
+
 <!--
 So that was some fast magic - but we had threads before - who cares?
 -->
 ---
 
-# Threads vs. Fibers
+# Threads vs. Fiber Scheduler
 
 - Thread = CPU controlled execution
-- Fibers = VM controlled execution
+- Fiber Scheduler = VM controlled execution
 
 <img src="/fibers-vs-threads.png" />
 
 Source: https://blog.saeloun.com/2022/03/01/ruby-fibers-101.html
 
 <!--
+Fibers (prior to Ruby 3) required your code to manage an execute processes. This is fine until it came to blocking code, at which point you
+would start to loose some of the speed benefits you may get from running things concurrently.
+
 Instead of relying on the CPU for scheduling and execution, we can now control it with fiber_scheduler
 fiber_scheduler is used under the hood in Async gem
+
+Ruby does not include a Fiber Scheduler itself, however it does define an interface which can then be implemented (which is what Fiber Scheduler does)
 -->
 ---
 layout: center
 ---
 
-# LIVE CODING TIME
+# LIVE **DEMO** TIME
 
 ---
 layout: cover
@@ -143,7 +158,7 @@ This is what Ractors unlocks
 layout: center
 ---
 
-# LIVE RACTOR TIME
+# LIVE **RACTOR** TIME
 
 ---
 
@@ -185,3 +200,9 @@ layout: cover
 Fibers Photo by <a href="https://unsplash.com/@redaquamedia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Denny Müller</a> on <a href="https://unsplash.com/s/photos/fiber?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 Ractor Photo by <a href="https://unsplash.com/@flyd2069?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">FLY:D</a> on <a href="https://unsplash.com/s/photos/radiation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+---
+layout: cover
+---
+
+# A's to your Q's

@@ -37,7 +37,7 @@ end.real
 # FIBERS
 f_counter = Counter.new
 fiber_time = Benchmark.measure do
-    Sync do
+  Sync do
     barrier = Async::Barrier.new
 
     CONCURRENT_TASKS.times.each do |_|
@@ -57,3 +57,5 @@ puts "Threads:\t#{t_counter.count}, #{t_counter.even_count}, #{thread_time.round
 puts "Fibers: \t#{f_counter.count}, #{f_counter.even_count}, #{fiber_time.round(3)}"
 
 puts "Difference:\t#{f_counter.count-t_counter.count}, #{f_counter.even_count - t_counter.even_count}, #{(fiber_time/thread_time*100).round(2)}%" 
+
+puts "\n" * 20
